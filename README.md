@@ -1,34 +1,76 @@
-# Sugar Cane Disease Detection
+# Sugarcane Disease Prediction
 
-This project aims to detect diseases in sugar cane crops using deep learning techniques. The system is designed to classify images of sugar cane leaves into different disease categories. The model is trained on a dataset of sugar cane leaf images, utilizing convolutional neural networks (CNNs) for image classification.
+This project aims to predict diseases in sugarcane plants using a deep learning model. The model is built using TensorFlow and Keras and is trained on a dataset containing images of sugarcane plants with different disease conditions. The trained model can be used to predict the presence of diseases in new images.
 
-## Dataset
+## Contents
 
-The dataset used in this project consists of sugar cane leaf images, categorized into healthy and diseased classes. The images are preprocessed and augmented to enhance model performance.
+1. [Introduction](#introduction)
+2. [Project Structure](#project-structure)
+3. [Getting Started](#getting-started)
+4. [Usage](#usage)
+5. [Web Application](#web-application)
+6. [Results](#results)
+7. [References](#references)
 
-## Model Architecture
+## Introduction
 
-The deep learning model employs a convolutional neural network with multiple layers for feature extraction and classification. The architecture includes convolutional layers, max-pooling layers, and dense layers. The model is trained to recognize patterns associated with various sugar cane diseases.
+Sugarcane is an essential crop, and diseases can significantly impact its yield. This project addresses the issue of disease detection in sugarcane plants by employing a deep learning model. The model is trained on a dataset of sugarcane plant images, categorized into different disease classes.
 
-## Training
+## Project Structure
 
-The model is trained using the TensorFlow framework. The training process involves multiple epochs, and the dataset is split into training, validation, and test sets. The model's performance is monitored through accuracy and loss metrics during training.
+- **sugarcanedisease.ipynb**: Jupyter Notebook containing the code for model training and evaluation.
+- **static**: Folder containing static files for the web application.
+  - **styles.css**: CSS file for styling the web application.
+  - **uploads**: Folder to store uploaded images for prediction.
+- **templates**: Folder containing HTML templates for the web application.
+  - **index.html**: Main page of the web application.
+- **sgr.h5**: Pre-trained TensorFlow/Keras model for sugarcane disease prediction.
+- **app.py**: Flask application script for running the web application.
+- **README.md**: Project documentation.
+
+## Getting Started
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/chyash1110/sugarcanedisease.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd sugarcanedisease
+   ```
+
+3. Install the required dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Usage
+
+### Model Training
+
+The model is trained using the `sugarcanedisease.py` Jupyter Notebook. Follow the instructions in the notebook to train and evaluate the model on the provided dataset.
+
+### Web Application
+
+1. Run the Flask web application:
+
+   ```bash
+   python app.py
+   ```
+
+2. Open your web browser and go to [http://127.0.0.1:5000/](http://127.0.0.1:5000/) to access the web application.
+
+3. Upload an image of a sugarcane plant to get predictions for disease presence.
 
 ## Results
 
-The trained model is evaluated on a test set to assess its generalization to new, unseen data. The results include accuracy and loss values, providing insights into the model's effectiveness in disease detection.
+The trained model achieves good accuracy in predicting sugarcane diseases. The web application provides an easy-to-use interface for users to upload images and receive predictions.
 
-## Prediction
+## References
 
-The system allows users to make predictions on sample sugar cane leaf images. The model predicts the disease class along with a confidence score. Users can visualize the actual and predicted classes, enabling an understanding of the model's performance on specific instances.
-
-## How to Use
-
-1. **Dataset**: Ensure you have a dataset of sugar cane leaf images with appropriate disease labels.
-2. **Configuration**: Adjust constants such as `IMAGE_SIZE`, `BATCH_SIZE`, `EPOCHS`, and others according to your dataset and computational resources.
-3. **Training**: Run the training script to train the model on your dataset.
-4. **Prediction**: Utilize the trained model for making predictions on new sugar cane leaf images.
-
-Feel free to explore and customize the code for your specific use case. This project serves as a foundation for building robust disease detection systems in agriculture.
-
-**Note:** Make sure to install the required dependencies specified in the notebook or script.
+- TensorFlow: https://www.tensorflow.org/
+- Flask: https://flask.palletsprojects.com/
