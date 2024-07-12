@@ -69,6 +69,10 @@ The model is trained using the `sugarcanedisease.py` Jupyter Notebook. Follow th
 ## Results
 
 The trained model achieves good accuracy in predicting sugarcane diseases. The web application provides an easy-to-use interface for users to upload images and receive predictions.
+<img width="468" alt="image" src="https://github.com/user-attachments/assets/4669d7a4-e463-43d0-8acd-d6211d541ff9">
+![image](https://github.com/user-attachments/assets/2c9a3732-5fde-4bc1-813c-ae6f322fe3f5)
+![image](https://github.com/user-attachments/assets/ee27620d-bdf9-4858-9c34-27ca13c790d9)
+
 
 ## References
 
